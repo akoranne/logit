@@ -3,8 +3,11 @@
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>
+            <!-- pattern>
                 %d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n
+            </pattern-->
+            <pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%t]) [trace=%X{X-Trace-Id:-},span=%X{X-Span-Id:-}] %highlight{%-5level} -- %c{1.}: %msg%n"
             </pattern>
         </encoder>
     </appender>

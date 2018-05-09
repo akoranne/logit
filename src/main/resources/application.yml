@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: logit
+  info: Example of logging and sleuth
